@@ -1,0 +1,26 @@
+// build.gradle
+
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.20.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.141.59'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.6.4'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.9.0'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.4.0'
+
+
+}
+
+test {
+    systemProperties System.getProperties()
+    useTestNG {
+        suites 'src/test/resources/testng.xml'
+    }
+}

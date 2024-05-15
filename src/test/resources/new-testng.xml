@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MySuite" parallel="tests" thread-count="2">
+    <!--    <parameter name="url" value="https://qa-primero.ehealthunit.org/" />-->
+
+    <test name="Chrome Test">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://www.demoblaze.com/"/>
+        <parameter name="username" value="test"/>
+        <parameter name="password" value="test"/>
+        <classes>
+            <!--class name="tests.LoginTest" /-->
+            <class name="tests.LoginTest"></class>
+            <!--            <class name="tests.TestAnnotations"></class>-->
+        </classes>
+    </test>
+
+</suite>
