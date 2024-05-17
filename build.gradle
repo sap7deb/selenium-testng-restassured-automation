@@ -18,7 +18,7 @@ dependencies {
 
 }
 
-test {
+tasks.register('testngtest', Test)  {
     systemProperties System.getProperties()
     useTestNG {
         suites 'src/test/resources/testng.xml'
